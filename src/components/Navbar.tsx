@@ -3,6 +3,7 @@ import {
   ClockIcon,
   UserCircleIcon,
   DevicePhoneMobileIcon,
+  ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -14,6 +15,11 @@ const __menu__ = [
     label: "หน้าหลัก",
     to: "/",
     icon: <HomeIcon className="p-2" />,
+  },
+  {
+    label: "ตะกร้า",
+    to: "/my-cart",
+    icon: <ShoppingCartIcon className="p-2" />,
   },
   {
     label: "ประวัติ",
@@ -37,13 +43,13 @@ const Navbar: React.FC = () => {
 
   const getNavLinkClass = (path: string) => {
     return router.pathname === path
-      ? "text-white p-1 bg-blue-800 rounded-full"
+      ? "text-white p-1 bg-blue-800 rounded-xl"
       : "p-2";
   };
 
   return (
-    <nav className="p-1 fixed w-full bottom-0 rounded-full ">
-      <div className="bg-blue-900 rounded-full min-h-16 flex flex-col align-middle">
+    <nav className="fixed z-50 w-full bottom-0 rounded-full ">
+      <div className="bg-blue-900  min-h-16 flex flex-col align-middle">
         <ul className="flex justify-around ">
           {__menu__.map((page) => {
             return (
@@ -55,7 +61,7 @@ const Navbar: React.FC = () => {
                     )} text-blue-300 flex flex-col items-center w-20 h-20 `}
                   >
                     {page.icon}
-                    <p className="text-xs">{page.label}</p>
+                    <p className="text-xs pb-1">{page.label}</p>
                   </button>
                 </Link>
               </li>
