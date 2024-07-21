@@ -152,7 +152,7 @@ const IndexPage: NextPage = () => {
         <div>
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-2xl font-bold">หมวดหมู่สินค้าแนะนำ</h2>
-            <a href="/categories" className="text-blue-500 hover:underline">
+            <a href="/products" className="text-blue-500 hover:underline">
               ดูทั้งหมด
             </a>
           </div>
