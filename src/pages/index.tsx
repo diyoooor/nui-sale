@@ -3,6 +3,7 @@ import Loading from "components/Loading";
 import Skeleton from "components/Skeleton";
 import { NextPage } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import {
   A11y,
@@ -125,9 +126,9 @@ const IndexPage: NextPage = () => {
         <div className="mb-8">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-2xl font-bold">ประเภทสิ้นค้าที่แนะนำ</h2>
-            <a href="/categories" className="text-blue-500 hover:underline">
+            <Link href="/categories" className="text-blue-500 hover:underline">
               ดูทั้งหมด
-            </a>
+            </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {highlightCategories.map((category) => (
@@ -152,9 +153,9 @@ const IndexPage: NextPage = () => {
         <div>
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-2xl font-bold">หมวดหมู่สินค้าแนะนำ</h2>
-            <a href="/products" className="text-blue-500 hover:underline">
+            <Link href="/products" className="text-blue-500 hover:underline">
               ดูทั้งหมด
-            </a>
+            </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {highlightProducts.map((product) => (
