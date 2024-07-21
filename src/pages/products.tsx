@@ -103,7 +103,7 @@ const ProductsPage: React.FC = () => {
     }, 2000);
 
     return () => clearTimeout(timeoutId);
-  }, [searchTerm, selectedTags]);
+  });
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
