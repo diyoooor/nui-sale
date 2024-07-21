@@ -1,3 +1,100 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.search-clear-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.search-clear-button:hover {
+    color: #ff0000;
+}
+
+.tag-button {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.tag-button.selected {
+    background-color: #007bff;
+    color: white;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.inset-0 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.bg-gray-800 {
+    background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+}
+
+.bg-opacity-75 {
+    --tw-bg-opacity: 0.75;
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.bg-white {
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+
+.rounded {
+    border-radius: 0.25rem;
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.top-2 {
+    top: 0.5rem;
+}
+
+.right-2 {
+    right: 0.5rem;
+}
+
+.text-gray-600 {
+    color: rgba(75, 85, 99, var(--tw-text-opacity));
+}
+
+.hover\:text-gray-900:hover {
+    color: rgba(17, 24, 39, var(--tw-text-opacity));
+}
