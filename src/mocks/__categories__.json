@@ -90,37 +90,37 @@
       "id": 1,
       "category": "ร้านส้มตำ",
       "vegetables": ["มะละกอ", "ถั่วฝักยาว", "มะเขือเทศ", "พริกขี้หนู"],
-      "image_url": "https://example.com/images/somtam-shop.jpg"
+      "image_url": "/images/categories/ส้มตำ.jpg"
     },
     {
       "id": 2,
       "category": "ร้านก๋วยเตี๋ยว",
       "vegetables": ["ถั่วงอก", "ต้นหอม", "ผักชี", "ผักบุ้ง"],
-      "image_url": "https://example.com/images/noodle-shop.jpg"
+      "image_url": "/images/categories/ก๋วยเตี๋ยว.jpg"
     },
     {
       "id": 3,
       "category": "ร้านข้าวแกง",
       "vegetables": ["มะเขือพวง", "ใบโหระพา", "ฟักทอง", "พริกหยวก"],
-      "image_url": "https://example.com/images/rice-curry-shop.jpg"
+      "image_url": "/images/categories/ข้าวแกง.jpg"
     },
     {
       "id": 4,
       "category": "ร้านอาหารตามสั่ง",
       "vegetables": ["คะน้า", "ผักบุ้ง", "ถั่วฝักยาว", "กะหล่ำปลี"],
-      "image_url": "https://example.com/images/made-to-order-shop.jpg"
+      "image_url": "/images/categories/อาหารตามสั่ง.jpg"
     },
     {
       "id": 5,
       "category": "ร้านขนมจีน",
       "vegetables": ["ถั่วงอก", "ใบแมงลัก", "ถั่วฝักยาว", "ผักกาดดอง"],
-      "image_url": "https://example.com/images/kanom-jeen-shop.jpg"
+      "image_url": "/images/categories/ขนมจีน.jpg"
     },
     {
       "id": 6,
       "category": "ร้านกะเพรา",
       "vegetables": ["ใบกะเพรา", "พริกขี้หนู", "กระเทียม", "ถั่วฝักยาว"],
-      "image_url": "https://example.com/images/basil-shop.jpg"
+      "image_url": "/images/categories/กระเพรา.jpg"
     }
   ]
 }
