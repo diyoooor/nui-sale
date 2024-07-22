@@ -1,0 +1,526 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "productName": "มะละกอ",
+      "variants": ["ป๊อก", "ส้มตำ"],
+      "price": {
+        "byBag": null,
+        "byKilogram": 40,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/papaya.jpg",
+      "categories": ["ร้านส้มตำ", "ผักใบ"]
+    },
+    {
+      "id": 2,
+      "productName": "ถั่วฝักยาว",
+      "variants": ["ถั่วแขก"],
+      "price": {
+        "byBag": null,
+        "byKilogram": 60,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/yardlong-bean.jpg",
+      "categories": [
+        "ร้านส้มตำ",
+        "ร้านก๋วยเตี๋ยว",
+        "ร้านข้าวแกง",
+        "ร้านอาหารตามสั่ง",
+        "ร้านขนมจีน",
+        "ร้านกะเพรา"
+      ]
+    },
+    {
+      "id": 3,
+      "productName": "มะเขือเทศ",
+      "variants": ["มะเขือส้ม"],
+      "price": {
+        "byBag": null,
+        "byKilogram": 50,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/tomato.jpg",
+      "categories": ["ร้านส้มตำ", "ร้านขนมจีน", "ผักใบ"]
+    },
+    {
+      "id": 4,
+      "productName": "พริกขี้หนู",
+      "variants": ["พริกขี้หนูสวน"],
+      "price": {
+        "byBag": null,
+        "byKilogram": 120,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/bird-chili.jpg",
+      "categories": ["ร้านส้มตำ", "ร้านกะเพรา", "ผักใบ"]
+    },
+    {
+      "id": 5,
+      "productName": "ถั่วงอก",
+      "variants": [],
+      "price": {
+        "byBag": null,
+        "byKilogram": 20,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/bean-sprouts.jpg",
+      "categories": ["ร้านก๋วยเตี๋ยว", "ร้านขนมจีน", "ร้านอาหารเจ"]
+    },
+    {
+      "id": 6,
+      "productName": "ต้นหอม",
+      "variants": ["หอมแบ่ง"],
+      "price": {
+        "byBag": null,
+        "byKilogram": 70,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/green-onion.jpg",
+      "categories": [
+        "ร้านก๋วยเตี๋ยว",
+        "ร้านข้าวแกง",
+        "ร้านข้าวต้ม",
+        "ผักตระกูลหัวหอม"
+      ]
+    },
+    {
+      "id": 7,
+      "productName": "ผักชี",
+      "variants": ["ผักหอม"],
+      "price": {
+        "byBag": null,
+        "byKilogram": 100,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/coriander.jpg",
+      "categories": ["ร้านก๋วยเตี๋ยว", "ร้านข้าวแกง", "ร้านข้าวมันไก่", "ผักใบ"]
+    },
+    {
+      "id": 8,
+      "productName": "ผักบุ้ง",
+      "variants": ["ผักบุ้งจีน"],
+      "price": {
+        "byBag": null,
+        "byKilogram": 30,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/morning-glory.jpg",
+      "categories": ["ร้านก๋วยเตี๋ยว", "ร้านอาหารตามสั่ง", "ผักใบ"]
+    },
+    {
+      "id": 9,
+      "productName": "มะเขือพวง",
+      "variants": [],
+      "price": {
+        "byBag": null,
+        "byKilogram": 80,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/turkey-berry.jpg",
+      "categories": ["ร้านข้าวแกง", "ผักใบ"]
+    },
+    {
+      "id": 10,
+      "productName": "ใบโหระพา",
+      "variants": ["โหระพา"],
+      "price": {
+        "byBag": null,
+        "byKilogram": 150,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/sweet-basil.jpg",
+      "categories": ["ร้านข้าวแกง", "ผักใบ"]
+    },
+    {
+      "id": 11,
+      "productName": "ฟักทอง",
+      "variants": [],
+      "price": {
+        "byBag": null,
+        "byKilogram": 25,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/pumpkin.jpg",
+      "categories": ["ร้านข้าวแกง", "ผักตระกูลฟัก"]
+    },
+    {
+      "id": 12,
+      "productName": "พริกหยวก",
+      "variants": ["พริกหวาน"],
+      "price": {
+        "byBag": null,
+        "byKilogram": 90,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/bell-pepper.jpg",
+      "categories": ["ร้านข้าวแกง", "ผักตระกูลฟัก"]
+    },
+    {
+      "id": 13,
+      "productName": "คะน้า",
+      "variants": [],
+      "price": {
+        "byBag": null,
+        "byKilogram": 35,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/chinese-kale.jpg",
+      "categories": ["ร้านอาหารตามสั่ง", "ผักใบ", "ผักตระกูลกะหล่ำ"]
+    },
+    {
+      "id": 14,
+      "productName": "กะหล่ำปลี",
+      "variants": [],
+      "price": {
+        "byBag": null,
+        "byKilogram": 30,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/cabbage.jpg",
+      "categories": ["ร้านอาหารตามสั่ง", "ร้านข้าวต้ม", "ผักตระกูลกะหล่ำ"]
+    },
+    {
+      "id": 15,
+      "productName": "ใบแมงลัก",
+      "variants": [],
+      "price": {
+        "byBag": null,
+        "byKilogram": 200,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/lemon-basil.jpg",
+      "categories": ["ร้านขนมจีน", "ผักใบ"]
+    },
+    {
+      "id": 16,
+      "productName": "ผักกาดดอง",
+      "variants": [],
+      "price": {
+        "byBag": 10,
+        "byKilogram": null,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": "bag",
+        "byKilogram": null,
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/pickled-mustard-greens.jpg",
+      "categories": ["ร้านขนมจีน", "ร้านข้าวต้ม"]
+    },
+    {
+      "id": 17,
+      "productName": "ใบกะเพรา",
+      "variants": [],
+      "price": {
+        "byBag": null,
+        "byKilogram": 180,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/holy-basil.jpg",
+      "categories": ["ร้านกะเพรา", "ผักใบ"]
+    },
+    {
+      "id": 18,
+      "productName": "กระเทียม",
+      "variants": [],
+      "price": {
+        "byBag": null,
+        "byKilogram": 120,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/garlic.jpg",
+      "categories": ["ร้านกะเพรา", "ร้านข้าวมันไก่", "ผักตระกูลหัวหอม"]
+    },
+    {
+      "id": 19,
+      "productName": "แตงกวา",
+      "variants": [],
+      "price": {
+        "byBag": null,
+        "byKilogram": 25,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/cucumber.jpg",
+      "categories": ["ร้านข้าวมันไก่", "ผักตระกูลฟัก"]
+    },
+    {
+      "id": 20,
+      "productName": "ขิง",
+      "variants": [],
+      "price": {
+        "byBag": null,
+        "byKilogram": 70,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/ginger.jpg",
+      "categories": ["ร้านข้าวมันไก่", "ผักราก"]
+    },
+    {
+      "id": 21,
+      "productName": "เต้าหู้",
+      "variants": [],
+      "price": {
+        "byBag": null,
+        "byKilogram": null,
+        "byItem": 15
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": null,
+        "byItem": "item"
+      },
+      "imageUrl": "https://example.com/images/tofu.jpg",
+      "categories": ["ร้านอาหารเจ"]
+    },
+    {
+      "id": 22,
+      "productName": "เห็ดหอม",
+      "variants": [],
+      "price": {
+        "byBag": null,
+        "byKilogram": 200,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/shiitake.jpg",
+      "categories": ["ร้านอาหารเจ", "ร้านข้าวต้ม"]
+    },
+    {
+      "id": 23,
+      "productName": "ผักกาดขาว",
+      "variants": [],
+      "price": {
+        "byBag": null,
+        "byKilogram": 35,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/napa-cabbage.jpg",
+      "categories": ["ร้านอาหารเจ", "ผักตระกูลกะหล่ำ"]
+    },
+    {
+      "id": 24,
+      "productName": "หอมแดง",
+      "variants": [],
+      "price": {
+        "byBag": null,
+        "byKilogram": 110,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/shallot.jpg",
+      "categories": ["ผักตระกูลหัวหอม"]
+    },
+    {
+      "id": 25,
+      "productName": "แครอท",
+      "variants": [],
+      "price": {
+        "byBag": null,
+        "byKilogram": 45,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/carrot.jpg",
+      "categories": ["ผักราก"]
+    },
+    {
+      "id": 26,
+      "productName": "มันฝรั่ง",
+      "variants": [],
+      "price": {
+        "byBag": null,
+        "byKilogram": 40,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/potato.jpg",
+      "categories": ["ผักราก"]
+    },
+    {
+      "id": 27,
+      "productName": "หัวไชเท้า",
+      "variants": [],
+      "price": {
+        "byBag": null,
+        "byKilogram": 30,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/daikon.jpg",
+      "categories": ["ผักราก"]
+    },
+    {
+      "id": 28,
+      "productName": "บีทรูท",
+      "variants": [],
+      "price": {
+        "byBag": null,
+        "byKilogram": 60,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/beetroot.jpg",
+      "categories": ["ผักราก"]
+    },
+    {
+      "id": 29,
+      "productName": "บรอกโคลี",
+      "variants": [],
+      "price": {
+        "byBag": null,
+        "byKilogram": 80,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/broccoli.jpg",
+      "categories": ["ผักตระกูลกะหล่ำ"]
+    },
+    {
+      "id": 30,
+      "productName": "กะหล่ำดอก",
+      "variants": [],
+      "price": {
+        "byBag": null,
+        "byKilogram": 70,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "https://example.com/images/cauliflower.jpg",
+      "categories": ["ผักตระกูลกะหล่ำ"]
+    }
+  ]
+}

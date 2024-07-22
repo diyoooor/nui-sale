@@ -1,109 +1,38 @@
 /* eslint-disable @next/next/no-img-element */
 import ProductModal from "components/ProductModal";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
-type Product = {
-  id: number;
-  productName: string;
-  variants: string[];
-  price: {
-    byBag: number;
-    byKilogram: number;
-    byItem: number;
-  };
-  unit: {
-    byBag: string;
-    byKilogram: string;
-    byItem: string;
-  };
-  quantityInStock: number;
-  storeDate: string;
-  imageUrl: string;
-  categories: string[];
-};
+import { products } from "../mocks/__products__.json";
+import { localThaiShops } from "../mocks/__categories__.json";
 
-const products: Product[] = [
-  {
-    id: 1,
-    productName: "หัวไชเท้า",
-    variants: ["หัวผักกาด"],
-    price: {
-      byBag: 100,
-      byKilogram: 50,
-      byItem: 10,
-    },
-    unit: {
-      byBag: "Bag",
-      byKilogram: "Kilogram",
-      byItem: "Item",
-    },
-    quantityInStock: 20,
-    storeDate: "2023-01-01",
-    imageUrl: "https://via.placeholder.com/50",
-    categories: ["ก๋วยเตี๋ยว"],
-  },
-  {
-    id: 2,
-    productName: "ผักชีฝรั่ง",
-    variants: ["ผักชีใบเลื่อย"],
-    price: {
-      byBag: 120,
-      byKilogram: 60,
-      byItem: 12,
-    },
-    unit: {
-      byBag: "Bag",
-      byKilogram: "Kilogram",
-      byItem: "Item",
-    },
-    quantityInStock: 15,
-    storeDate: "2023-02-15",
-    imageUrl: "https://via.placeholder.com/50",
-    categories: ["ก๋วยเตี๋ยว", "Category2"],
-  },
-  {
-    id: 3,
-    productName: "แตงล้าน",
-    variants: ["แตงใหญ่"],
-    price: {
-      byBag: 320,
-      byKilogram: 60,
-      byItem: 12,
-    },
-    unit: {
-      byBag: "Bag",
-      byKilogram: "Kilogram",
-      byItem: "Item",
-    },
-    quantityInStock: 15,
-    storeDate: "2023-02-15",
-    imageUrl: "https://via.placeholder.com/50",
-    categories: ["ก๋วยเตี๋ยว", "Category2"],
-  },
-];
-
-const __mock_catagories__ = [
-  "ร้านส้มตำ",
-  "ก๋วยเตี๋ยว",
-  "ขนมจีน",
-  "ผักใบ",
-  "เครื่องปรุง",
-];
+const __mock_catagories__ = localThaiShops;
 
 const ProductsPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
-  const [filteredProducts, setFilteredProducts] = useState<Product[]>(products);
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [filteredProducts, setFilteredProducts] = useState(products);
+  const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const router = useRouter();
+
+  const { query } = router;
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       filterProducts();
-    }, 2000);
+    }, 200);
 
     return () => clearTimeout(timeoutId);
   });
+
+  useEffect(() => {
+    const { cat } = query;
+    if (cat !== undefined || typeof cat === "string") {
+      setSelectedTags([String(cat)]);
+    }
+  }, [query]);
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
@@ -136,7 +65,7 @@ const ProductsPage: React.FC = () => {
     setFilteredProducts(products);
   };
 
-  const openModal = (product: Product) => {
+  const openModal = (product: any) => {
     setSelectedProduct(product);
     setIsModalOpen(true);
   };
@@ -147,7 +76,7 @@ const ProductsPage: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 pb-24">
       <h1 className="text-2xl mb-4">Products</h1>
 
       <div className="relative mb-4">
@@ -172,14 +101,16 @@ const ProductsPage: React.FC = () => {
         <h2 className="text-lg mb-2">Tags</h2>
         {__mock_catagories__.map((tag) => (
           <button
-            key={tag}
-            onClick={() => handleTagClick(tag)}
+            key={tag.id}
+            onClick={() => handleTagClick(tag.category)}
             className={`p-2 border rounded mr-2 mb-2 ${
-              selectedTags.includes(tag) ? "bg-blue-500 text-white" : ""
+              selectedTags.includes(tag.category)
+                ? "bg-blue-500 text-white"
+                : ""
             }`}
           >
-            {tag}
-            {selectedTags.includes(tag) && (
+            {tag.category}
+            {selectedTags.includes(tag.category) && (
               <span className="ml-1 text-white">✖</span>
             )}
           </button>
@@ -193,14 +124,17 @@ const ProductsPage: React.FC = () => {
             className="mb-4  border rounded flex relative max-h-32"
           >
             <img
-              src={product.imageUrl}
+              src={"https://via.placeholder.com/50"}
               alt={product.productName}
               className="w-32 h-32 object-cover mr-2"
             />
             <div className="p-2 flex flex-col w-full">
-              <h2 className="text-lg font-bold">{product.productName}</h2>
-              <p>
-                <strong>ชื่ออื่นๆ : </strong> {product.variants.join(", ")}
+              <h2 className="text-2xl font-bold">
+                <strong>{product.productName}</strong>
+              </h2>
+              <p className="text-xl">
+                <strong>ชื่ออื่นๆ : </strong>{" "}
+                {product.variants.join(", ") || "-"}
               </p>
               <div className="flex justify-between">
                 <p>

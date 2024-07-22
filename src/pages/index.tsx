@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import Loading from "components/Loading";
 import Skeleton from "components/Skeleton";
 import { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import {
   A11y,
@@ -14,13 +14,15 @@ import {
   Scrollbar,
 } from "swiper/modules";
 import { SwiperSlide, Swiper } from "swiper/react";
+import { highlightCat } from "../mocks/__categories__.json";
 import "swiper/swiper-bundle.css";
 
 const IndexPage: NextPage = () => {
+  const router = useRouter();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2000);
+    setTimeout(() => setLoading(false), 200);
   }, []);
 
   const banners = [
@@ -29,46 +31,13 @@ const IndexPage: NextPage = () => {
     { id: 3, imageUrl: "/images/banner3.png" },
   ];
 
-  const highlightCategories = [
-    {
-      id: 1,
-      name: "ร้านส้มตำ",
-      imageUrl: "https://via.placeholder.com/150",
-    },
-    { id: 2, name: "ร้านอาหาร", imageUrl: "https://via.placeholder.com/150" },
-    {
-      id: 3,
-      name: "ร้านก๋วยเตี๋ยว",
-      imageUrl: "https://via.placeholder.com/150",
-    },
-    {
-      id: 4,
-      name: "ร้านขนมจีน",
-      imageUrl: "https://via.placeholder.com/150",
-    },
-  ];
-
-  const highlightProducts = [
-    {
-      id: 1,
-      name: "ผักใบ",
-      imageUrl: "https://via.placeholder.com/150",
-    },
-    {
-      id: 2,
-      name: "ผักหัว",
-      imageUrl: "https://via.placeholder.com/150",
-    },
-    {
-      id: 3,
-      name: "เครื่องปรุง",
-      imageUrl: "https://via.placeholder.com/150",
-    },
-  ];
+  const handleClickCategory = (cat: string) => {
+    router.push(`/products?cat=${cat}`);
+  };
 
   if (loading) {
     return (
-      <div className="container mx-auto p-4 space-y-8">
+      <div className="container mx-auto p-4 space-y-8 ">
         <Skeleton type="banner" />
         <div className="mb-8">
           <div className="flex justify-between items-center mb-4">
@@ -90,7 +59,10 @@ const IndexPage: NextPage = () => {
 
   return (
     <>
-      <div className="container mx-auto p-4 pb-24">
+      <div className="container mx-auto p-4 pb-24 bg-slate-500 bg-opacity-25">
+        <div className="text-center p-4 text-3xl  mb-4">
+          <strong>นุ้ย ผักสด สะเดา</strong>
+        </div>
         {/* Banner Section */}
         <div className="mb-8">
           <Swiper
@@ -105,8 +77,8 @@ const IndexPage: NextPage = () => {
             spaceBetween={30}
             pagination={{ clickable: true }}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
-            onSwiper={() => console.log(`swipe`)}
-            onSlideChange={() => console.log("slide change")}
+            onSwiper={() => console.log()}
+            onSlideChange={() => console.log()}
           >
             {banners.map((banner) => (
               <SwiperSlide key={banner.id}>
@@ -126,51 +98,28 @@ const IndexPage: NextPage = () => {
         <div className="mb-8">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-2xl font-bold">ประเภทสิ้นค้าที่แนะนำ</h2>
-            <Link href="/categories" className="text-blue-500 hover:underline">
+            <Link href="/categories" className="text-green-500 hover:underline">
               ดูทั้งหมด
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {highlightCategories.map((category) => (
+            {highlightCat.map((category) => (
               <div
                 key={category.id}
-                className="flex flex-col items-center p-4 border rounded-lg shadow-sm"
+                className="flex flex-col items-center p-4 border rounded-lg shadow-sm space-y-4 bg-slate-200"
+                onClick={() => handleClickCategory(category.category)}
               >
+                <h3 className="text-2xl font-semibold underline underline-offset-8">
+                  {category.category}
+                </h3>
                 <img
-                  src={category.imageUrl}
-                  alt={category.name}
+                  src={"https://via.placeholder.com/150"}
+                  alt={category.category}
                   width={150}
                   height={150}
                   className="w-full h-40 object-cover rounded-lg mb-2"
                 />
-                <h3 className="text-lg font-semibold">{category.name}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Highlight Products Section */}
-        <div>
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-2xl font-bold">หมวดหมู่สินค้าแนะนำ</h2>
-            <Link href="/products" className="text-blue-500 hover:underline">
-              ดูทั้งหมด
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {highlightProducts.map((product) => (
-              <div
-                key={product.id}
-                className="flex flex-col items-center p-4 border rounded-lg shadow-sm"
-              >
-                <img
-                  src={product.imageUrl}
-                  alt={product.name}
-                  width={150}
-                  height={150}
-                  className="w-full h-40 object-cover rounded-lg mb-2"
-                />
-                <h3 className="text-lg font-semibold">{product.name}</h3>
+                <p className="text-xl">{category.vegetables.join(", ")}</p>
               </div>
             ))}
           </div>
