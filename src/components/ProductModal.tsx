@@ -16,7 +16,6 @@ type Product = {
     byKilogram: string;
     byItem: string;
   };
-  quantityInStock: number;
   storeDate: string;
   imageUrl: string;
   categories: string[];
@@ -46,9 +45,7 @@ const ProductModal: React.FC<ProductModalProps> = ({
   };
 
   const handleIncrease = () => {
-    if (quantity < product.quantityInStock) {
-      setQuantity(quantity + 1);
-    }
+    setQuantity(quantity + 1);
   };
 
   const handleDecrease = () => {
@@ -70,22 +67,22 @@ const ProductModal: React.FC<ProductModalProps> = ({
   };
 
   return (
-    <CustomModal isOpen={isOpen} onClose={onClose}>
+    <CustomModal isOpen={isOpen} onClose={onClose} className="border-2 w-8/12">
       <h2 className="text-2xl mb-4">{product.productName}</h2>
       <img
-        src={product.imageUrl}
+        src={"https://via.placeholder.com/50"}
         alt={product.productName}
         className="w-full object-cover mb-4"
       />
       <div className=" w-full text-end">
-        <p className="text-xl  ">
-          <strong>ถุงละ :</strong> {product.price.byBag} บาท
-        </p>
         <p className="text-xl">
           <strong>กิโลกรัม :</strong> {product.price.byKilogram} บาท
         </p>
         <p className="text-xl">
           <strong>ชิ้นละ :</strong> {product.price.byItem} บาท
+        </p>
+        <p className="text-xl  ">
+          <strong>ถุงละ :</strong> {product.price.byBag} บาท
         </p>
       </div>
 

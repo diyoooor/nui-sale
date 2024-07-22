@@ -1,0 +1,126 @@
+{
+  "localThaiShops": [
+    {
+      "id": 1,
+      "category": "ร้านส้มตำ",
+      "vegetables": ["มะละกอ", "ถั่วฝักยาว", "มะเขือเทศ", "พริกขี้หนู"],
+      "image_url": "https://example.com/images/somtam-shop.jpg"
+    },
+    {
+      "id": 2,
+      "category": "ร้านก๋วยเตี๋ยว",
+      "vegetables": ["ถั่วงอก", "ต้นหอม", "ผักชี", "ผักบุ้ง"],
+      "image_url": "https://example.com/images/noodle-shop.jpg"
+    },
+    {
+      "id": 3,
+      "category": "ร้านข้าวแกง",
+      "vegetables": ["มะเขือพวง", "ใบโหระพา", "ฟักทอง", "พริกหยวก"],
+      "image_url": "https://example.com/images/rice-curry-shop.jpg"
+    },
+    {
+      "id": 4,
+      "category": "ร้านอาหารตามสั่ง",
+      "vegetables": ["คะน้า", "ผักบุ้ง", "ถั่วฝักยาว", "กะหล่ำปลี"],
+      "image_url": "https://example.com/images/made-to-order-shop.jpg"
+    },
+    {
+      "id": 5,
+      "category": "ร้านขนมจีน",
+      "vegetables": ["ถั่วงอก", "ใบแมงลัก", "ถั่วฝักยาว", "ผักกาดดอง"],
+      "image_url": "https://example.com/images/kanom-jeen-shop.jpg"
+    },
+    {
+      "id": 6,
+      "category": "ร้านกะเพรา",
+      "vegetables": ["ใบกะเพรา", "พริกขี้หนู", "กระเทียม", "ถั่วฝักยาว"],
+      "image_url": "https://example.com/images/basil-shop.jpg"
+    },
+    {
+      "id": 7,
+      "category": "ร้านข้าวมันไก่",
+      "vegetables": ["แตงกวา", "ผักชี", "ขิง", "กระเทียม"],
+      "image_url": "https://example.com/images/hainanese-chicken-rice-shop.jpg"
+    },
+    {
+      "id": 8,
+      "category": "ร้านอาหารเจ",
+      "vegetables": ["เต้าหู้", "เห็ดหอม", "ผักกาดขาว", "ถั่วงอก"],
+      "image_url": "https://example.com/images/vegetarian-shop.jpg"
+    },
+    {
+      "id": 9,
+      "category": "ร้านข้าวต้ม",
+      "vegetables": ["กะหล่ำปลี", "ผักกาดดอง", "เห็ดหอม", "ต้นหอม"],
+      "image_url": "https://example.com/images/rice-soup-shop.jpg"
+    },
+    {
+      "id": 10,
+      "category": "ผักใบ",
+      "vegetables": ["ผักกาดหอม", "ผักโขม", "คะน้า", "ใบโหระพา"],
+      "image_url": "https://example.com/images/leafy-vegetables.jpg"
+    },
+    {
+      "id": 11,
+      "category": "ผักราก",
+      "vegetables": ["แครอท", "มันฝรั่ง", "หัวไชเท้า", "บีทรูท"],
+      "image_url": "https://example.com/images/root-vegetables.jpg"
+    },
+    {
+      "id": 12,
+      "category": "ผักตระกูลกะหล่ำ",
+      "vegetables": ["บรอกโคลี", "กะหล่ำดอก", "กะหล่ำปลี", "บรัสเซลสปราวต์"],
+      "image_url": "https://example.com/images/cruciferous-vegetables.jpg"
+    },
+    {
+      "id": 13,
+      "category": "ผักตระกูลหัวหอม",
+      "vegetables": ["หอมหัวใหญ่", "กระเทียม", "ต้นหอม", "หอมแดง"],
+      "image_url": "https://example.com/images/allium-vegetables.jpg"
+    },
+    {
+      "id": 14,
+      "category": "ผักตระกูลฟัก",
+      "vegetables": ["ซูกินี", "ฟักทอง", "แตงกวา", "ฟักเขียว"],
+      "image_url": "https://example.com/images/marrow-vegetables.jpg"
+    }
+  ],
+  "highlightCat": [
+    {
+      "id": 1,
+      "category": "ร้านส้มตำ",
+      "vegetables": ["มะละกอ", "ถั่วฝักยาว", "มะเขือเทศ", "พริกขี้หนู"],
+      "image_url": "https://example.com/images/somtam-shop.jpg"
+    },
+    {
+      "id": 2,
+      "category": "ร้านก๋วยเตี๋ยว",
+      "vegetables": ["ถั่วงอก", "ต้นหอม", "ผักชี", "ผักบุ้ง"],
+      "image_url": "https://example.com/images/noodle-shop.jpg"
+    },
+    {
+      "id": 3,
+      "category": "ร้านข้าวแกง",
+      "vegetables": ["มะเขือพวง", "ใบโหระพา", "ฟักทอง", "พริกหยวก"],
+      "image_url": "https://example.com/images/rice-curry-shop.jpg"
+    },
+    {
+      "id": 4,
+      "category": "ร้านอาหารตามสั่ง",
+      "vegetables": ["คะน้า", "ผักบุ้ง", "ถั่วฝักยาว", "กะหล่ำปลี"],
+      "image_url": "https://example.com/images/made-to-order-shop.jpg"
+    },
+    {
+      "id": 5,
+      "category": "ร้านขนมจีน",
+      "vegetables": ["ถั่วงอก", "ใบแมงลัก", "ถั่วฝักยาว", "ผักกาดดอง"],
+      "image_url": "https://example.com/images/kanom-jeen-shop.jpg"
+    },
+    {
+      "id": 6,
+      "category": "ร้านกะเพรา",
+      "vegetables": ["ใบกะเพรา", "พริกขี้หนู", "กระเทียม", "ถั่วฝักยาว"],
+      "image_url": "https://example.com/images/basil-shop.jpg"
+    }
+  ]
+}
