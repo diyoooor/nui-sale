@@ -2,12 +2,10 @@ import {
   HomeIcon,
   ClockIcon,
   UserCircleIcon,
-  DevicePhoneMobileIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { useRouter } from "next/router";
-
 import React from "react";
 
 const __menu__ = [
@@ -27,11 +25,6 @@ const __menu__ = [
     icon: <ClockIcon className="w-6 h-6" />,
   },
   {
-    label: "สอบถาม",
-    to: "/contacts",
-    icon: <DevicePhoneMobileIcon className="w-6 h-6" />,
-  },
-  {
     label: "โปรไฟล์",
     to: "/profile",
     icon: <UserCircleIcon className="w-6 h-6" />,
@@ -43,35 +36,30 @@ const Navbar: React.FC = () => {
 
   const getNavLinkClass = (path: string) => {
     return router.pathname === path
-      ? "text-white bg-green-900 "
-      : "text-green-300 hover:text-white ";
+      ? "bg-white text-black shadow-lg"
+      : "text-gray-400 hover:text-white";
   };
 
   return (
-    <nav
-      className="fixed z-50 bottom-2 bg-green-700 rounded-full shadow-lg w-11/12 mx-4
-    "
-    >
-      <div className="flex justify-around  items-center">
-        <ul className="flex justify-around w-full ">
-          {__menu__.map((page) => {
-            return (
-              <li key={page.label} className=" flex justify-center items-cente">
-                <Link href={page.to} passHref>
-                  <button
-                    className={`flex flex-col items-center w-16 h-16 rounded-full p-2 transition-all duration-500 ease-linear ${getNavLinkClass(
-                      page.to
-                    )}`}
-                  >
-                    {page.icon}
-                    <p className="text-xs">{page.label}</p>
-                  </button>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+    <nav className="fixed z-50 w-11/12 bottom-4 bg-gray-800 py-2 rounded-3xl shadow-lg mx-4">
+      <ul className="flex justify-around px-2">
+        {__menu__.map((page) => (
+          <li key={page.label} className="w-full flex justify-center">
+            <Link
+              href={page.to}
+              passHref
+              className={`flex flex-col items-center py-1 px-4 max-w-15 w-15  rounded-2xl transition-all duration-300 ease-in-out ${getNavLinkClass(
+                page.to
+              )} `}
+            >
+              <div>{page.icon}</div>
+              <p className="text-sm mt-1">
+                <strong>{page.label}</strong>
+              </p>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
 };
