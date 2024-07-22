@@ -14,7 +14,7 @@
         "byKilogram": "kilogram",
         "byItem": null
       },
-      "imageUrl": "https://example.com/images/papaya.jpg",
+      "imageUrl": "/images/products/มะละกอ.jpg",
       "categories": ["ร้านส้มตำ", "ผักใบ"]
     },
     {
@@ -31,7 +31,7 @@
         "byKilogram": "kilogram",
         "byItem": null
       },
-      "imageUrl": "https://example.com/images/yardlong-bean.jpg",
+      "imageUrl": "/images/products/ถั่วฝักยาว.jpg",
       "categories": [
         "ร้านส้มตำ",
         "ร้านก๋วยเตี๋ยว",
@@ -55,7 +55,7 @@
         "byKilogram": "kilogram",
         "byItem": null
       },
-      "imageUrl": "https://example.com/images/tomato.jpg",
+      "imageUrl": "/images/products/มะเขือเทศ.jpg",
       "categories": ["ร้านส้มตำ", "ร้านขนมจีน", "ผักใบ"]
     },
     {
@@ -72,7 +72,7 @@
         "byKilogram": "kilogram",
         "byItem": null
       },
-      "imageUrl": "https://example.com/images/bird-chili.jpg",
+      "imageUrl": "/images/products/พริกขี้หนู.jpg",
       "categories": ["ร้านส้มตำ", "ร้านกะเพรา", "ผักใบ"]
     },
     {
@@ -89,7 +89,7 @@
         "byKilogram": "kilogram",
         "byItem": null
       },
-      "imageUrl": "https://example.com/images/bean-sprouts.jpg",
+      "imageUrl": "/images/products/ถั่วงอก.jpg",
       "categories": ["ร้านก๋วยเตี๋ยว", "ร้านขนมจีน", "ร้านอาหารเจ"]
     },
     {
@@ -106,7 +106,7 @@
         "byKilogram": "kilogram",
         "byItem": null
       },
-      "imageUrl": "https://example.com/images/green-onion.jpg",
+      "imageUrl": "/images/products/ต้นหอม.jpg",
       "categories": [
         "ร้านก๋วยเตี๋ยว",
         "ร้านข้าวแกง",
@@ -521,6 +521,122 @@
       },
       "imageUrl": "https://example.com/images/cauliflower.jpg",
       "categories": ["ผักตระกูลกะหล่ำ"]
+    }
+  ],
+  "highlightProducts": [
+    {
+      "id": 1,
+      "productName": "มะละกอ",
+      "variants": ["ป๊อก", "ส้มตำ"],
+      "price": {
+        "byBag": null,
+        "byKilogram": 40,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "/images/products/มะละกอ.jpg",
+      "categories": ["ร้านส้มตำ", "ผักใบ"]
+    },
+    {
+      "id": 2,
+      "productName": "ถั่วฝักยาว",
+      "variants": ["ถั่วแขก"],
+      "price": {
+        "byBag": null,
+        "byKilogram": 60,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "/images/products/ถั่วฝักยาว.jpg",
+      "categories": [
+        "ร้านส้มตำ",
+        "ร้านก๋วยเตี๋ยว",
+        "ร้านข้าวแกง",
+        "ร้านอาหารตามสั่ง",
+        "ร้านขนมจีน",
+        "ร้านกะเพรา"
+      ]
+    },
+    {
+      "id": 3,
+      "productName": "มะเขือเทศ",
+      "variants": ["มะเขือส้ม"],
+      "price": {
+        "byBag": null,
+        "byKilogram": 50,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "/images/products/มะเขือเทศ.jpg",
+      "categories": ["ร้านส้มตำ", "ร้านขนมจีน", "ผักใบ"]
+    },
+    {
+      "id": 4,
+      "productName": "พริกขี้หนู",
+      "variants": ["พริกขี้หนูสวน"],
+      "price": {
+        "byBag": null,
+        "byKilogram": 120,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "/images/products/พริกขี้หนู.jpg",
+      "categories": ["ร้านส้มตำ", "ร้านกะเพรา", "ผักใบ"]
+    },
+    {
+      "id": 5,
+      "productName": "ถั่วงอก",
+      "variants": [],
+      "price": {
+        "byBag": null,
+        "byKilogram": 20,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "/images/products/ถั่วงอก.jpg",
+      "categories": ["ร้านก๋วยเตี๋ยว", "ร้านขนมจีน", "ร้านอาหารเจ"]
+    },
+    {
+      "id": 6,
+      "productName": "ต้นหอม",
+      "variants": ["หอมแบ่ง"],
+      "price": {
+        "byBag": null,
+        "byKilogram": 70,
+        "byItem": null
+      },
+      "unit": {
+        "byBag": null,
+        "byKilogram": "kilogram",
+        "byItem": null
+      },
+      "imageUrl": "/images/products/ต้นหอม.jpg",
+      "categories": [
+        "ร้านก๋วยเตี๋ยว",
+        "ร้านข้าวแกง",
+        "ร้านข้าวต้ม",
+        "ผักตระกูลหัวหอม"
+      ]
     }
   ]
 }
