@@ -37,7 +37,7 @@ const IndexPage: NextPage = () => {
 
   if (loading) {
     return (
-      <div className="container mx-auto p-4 space-y-8">
+      <div className="container mx-auto p-4 space-y-8 ">
         <Skeleton type="banner" />
         <div className="mb-8">
           <div className="flex justify-between items-center mb-4">
@@ -59,7 +59,10 @@ const IndexPage: NextPage = () => {
 
   return (
     <>
-      <div className="container mx-auto p-4 pb-24">
+      <div className="container mx-auto p-4 pb-24 bg-slate-500 bg-opacity-25">
+        <div className="text-center p-4 text-3xl  mb-4">
+          <strong>นุ้ย ผักสด สะเดา</strong>
+        </div>
         {/* Banner Section */}
         <div className="mb-8">
           <Swiper
@@ -95,7 +98,7 @@ const IndexPage: NextPage = () => {
         <div className="mb-8">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-2xl font-bold">ประเภทสิ้นค้าที่แนะนำ</h2>
-            <Link href="/categories" className="text-blue-500 hover:underline">
+            <Link href="/categories" className="text-green-500 hover:underline">
               ดูทั้งหมด
             </Link>
           </div>
@@ -103,7 +106,7 @@ const IndexPage: NextPage = () => {
             {highlightCat.map((category) => (
               <div
                 key={category.id}
-                className="flex flex-col items-center p-4 border rounded-lg shadow-sm space-y-4"
+                className="flex flex-col items-center p-4 border rounded-lg shadow-sm space-y-4 bg-slate-200"
                 onClick={() => handleClickCategory(category.category)}
               >
                 <h3 className="text-2xl font-semibold underline underline-offset-8">

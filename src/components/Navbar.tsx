@@ -14,27 +14,27 @@ const __menu__ = [
   {
     label: "หน้าหลัก",
     to: "/",
-    icon: <HomeIcon className="p-2" />,
+    icon: <HomeIcon className="w-6 h-6" />,
   },
   {
     label: "ตะกร้า",
     to: "/my-cart",
-    icon: <ShoppingCartIcon className="p-2" />,
+    icon: <ShoppingCartIcon className="w-6 h-6" />,
   },
   {
     label: "ประวัติ",
     to: "/history",
-    icon: <ClockIcon className="p-2" />,
+    icon: <ClockIcon className="w-6 h-6" />,
   },
   {
     label: "สอบถาม",
     to: "/contacts",
-    icon: <DevicePhoneMobileIcon className="p-2" />,
+    icon: <DevicePhoneMobileIcon className="w-6 h-6" />,
   },
   {
     label: "โปรไฟล์",
     to: "/profile",
-    icon: <UserCircleIcon className="p-2" />,
+    icon: <UserCircleIcon className="w-6 h-6" />,
   },
 ];
 
@@ -43,25 +43,28 @@ const Navbar: React.FC = () => {
 
   const getNavLinkClass = (path: string) => {
     return router.pathname === path
-      ? "text-white p-1 bg-blue-800 rounded-xl"
-      : "p-2";
+      ? "text-white bg-green-900 "
+      : "text-green-300 hover:text-white ";
   };
 
   return (
-    <nav className="fixed z-50 w-full bottom-0 rounded-full ">
-      <div className="bg-blue-900  min-h-16 flex flex-col align-middle">
-        <ul className="flex justify-around ">
+    <nav
+      className="fixed z-50 bottom-2 bg-green-700 rounded-full shadow-lg w-11/12 mx-4
+    "
+    >
+      <div className="flex justify-around  items-center">
+        <ul className="flex justify-around w-full ">
           {__menu__.map((page) => {
             return (
-              <li key={page.label}>
-                <Link href={page.to} className=" transition-all ">
+              <li key={page.label} className=" flex justify-center items-cente">
+                <Link href={page.to} passHref>
                   <button
-                    className={`${getNavLinkClass(
+                    className={`flex flex-col items-center w-16 h-16 rounded-full p-2 transition-all duration-500 ease-linear ${getNavLinkClass(
                       page.to
-                    )} text-blue-300 flex flex-col items-center w-20 h-20 `}
+                    )}`}
                   >
                     {page.icon}
-                    <p className="text-xs pb-1">{page.label}</p>
+                    <p className="text-xs">{page.label}</p>
                   </button>
                 </Link>
               </li>
