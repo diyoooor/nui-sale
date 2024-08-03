@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="fixed z-50 w-[95%] bottom-[1%] bg-gray-800 py-2 rounded-3xl shadow-lg mx-[2.5%]">
+    <nav className="fixed z-50 w-[98%] bottom-[1%] bg-gray-800 py-2 rounded-3xl shadow-lg mx-[1%]">
       <ul className="flex justify-around px-2">
         {__menu__.map((page) => (
           <li key={page.label} className="w-full flex justify-center h-10">
