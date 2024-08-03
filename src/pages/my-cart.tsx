@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Skeleton from "components/Skeleton";
 import { NextPage } from "next";
 import { useEffect, useState } from "react";
@@ -104,7 +105,6 @@ const initialProducts: Product[] = [
 
 const CartPage: NextPage = () => {
   const [products, setProducts] = useState<Product[]>(initialProducts);
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -161,31 +161,37 @@ const CartPage: NextPage = () => {
       return total + price * product.quantity;
     }, 0);
   };
+
   return (
     <>
       <div className="container mx-auto p-4 pb-24">
-        <h1 className="text-2xl mb-4">ตะกร้าของฉัน</h1>
+        <h1 className="text-3xl font-bold mb-6 text-center text-green-600">
+          ตะกร้าของฉัน
+        </h1>
         <ul>
           {products.map((product) => (
             <li
               key={product.id}
-              className="flex justify-between items-center mb-4 p-4 border rounded"
+              className="flex justify-between items-center mb-4 p-4 border rounded-lg shadow-sm bg-white hover:shadow-md transition-shadow duration-200"
             >
               <div>
-                <h2 className="text-md">{product.name}</h2>
-                <p>
+                <h2 className="text-lg font-semibold text-gray-700">
+                  {product.name}
+                </h2>
+                <p className="text-sm text-gray-500">
                   {product.unit === "bag"
                     ? "ราคาต่อถุง: "
                     : "ราคาต่อกิโลกรัม: "}
                   {product.unit === "bag"
                     ? product.pricePerBag
-                    : product.pricePerKg}
+                    : product.pricePerKg}{" "}
+                  บาท
                 </p>
               </div>
               <div className="flex items-center">
                 <button
                   onClick={() => decrementQuantity(product.id)}
-                  className="bg-gray-300 text-gray-700 p-2 rounded mr-2"
+                  className="bg-gray-300 text-gray-700 p-2 rounded-l"
                 >
                   -
                 </button>
@@ -195,19 +201,21 @@ const CartPage: NextPage = () => {
                   onChange={(e) =>
                     updateQuantity(product.id, parseInt(e.target.value))
                   }
-                  className="w-10 p-1 border rounded text-center"
+                  className="w-12 p-1 border-t border-b text-center focus:outline-none"
                   min="1"
                 />
                 <button
                   onClick={() => incrementQuantity(product.id)}
-                  className="bg-gray-300 text-gray-700 p-2 rounded ml-2"
+                  className="bg-gray-300 text-gray-700 p-2 rounded-r"
                 >
                   +
                 </button>
-                <p className="pl-2">{product.unit === "bag" ? "ถุง" : "กก."}</p>
+                <p className="pl-4 text-sm text-gray-500">
+                  {product.unit === "bag" ? "ถุง" : "กก."}
+                </p>
                 <button
                   onClick={() => removeProduct(product.id)}
-                  className="bg-red-500 text-white p-2 rounded ml-4"
+                  className="bg-red-500 text-white p-2 rounded ml-4 hover:bg-red-600 transition-colors duration-200"
                 >
                   ลบ
                 </button>
@@ -215,9 +223,9 @@ const CartPage: NextPage = () => {
             </li>
           ))}
         </ul>
-        <div className="mt-4">
-          <h2 className="text-xl">
-            ยอดทั้งหมด : ${calculateTotalPrice().toFixed(2)}
+        <div className="mt-8 p-4 bg-gray-100 rounded-lg shadow-sm">
+          <h2 className="text-xl font-bold text-gray-700">
+            ยอดทั้งหมด : {calculateTotalPrice().toFixed(2)} บาท
           </h2>
         </div>
       </div>

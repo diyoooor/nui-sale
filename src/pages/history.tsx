@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Skeleton from "components/Skeleton";
 import { NextPage } from "next";
 import { useState, useEffect } from "react";
@@ -126,15 +127,17 @@ const HistoryPage: NextPage = () => {
   return (
     <>
       <div className="container mx-auto p-4 pb-24">
-        <h1 className="text-3xl font-bold mb-4">ประวัติการสั่งซื้อ</h1>
-        <div className="space-y-4">
+        <h1 className="text-3xl font-bold mb-6 text-center text-green-600">
+          ประวัติการสั่งซื้อ
+        </h1>
+        <div className="space-y-6">
           {orders.map((order) => (
             <div
               key={order.id}
-              className="p-4 border rounded-lg shadow-sm flex justify-between items-center"
+              className="p-4 border rounded-lg shadow-sm flex justify-between items-center bg-white hover:shadow-md transition-shadow duration-200"
             >
               <div>
-                <p className="text-md font-semibold">
+                <p className="text-md font-semibold text-gray-700">
                   วันที่ {formatDateTime(order.date)}
                 </p>
                 <p className="text-sm text-gray-500">
@@ -145,7 +148,7 @@ const HistoryPage: NextPage = () => {
                 </p>
               </div>
               <span
-                className={`px-4 py-2 rounded-full text-white text-xs ${getStatusClass(
+                className={`px-4 py-2 rounded-full text-white text-xs font-semibold ${getStatusClass(
                   order.status
                 )}`}
               >
