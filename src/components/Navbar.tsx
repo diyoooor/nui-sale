@@ -44,18 +44,20 @@ const Navbar: React.FC = () => {
     <nav className="fixed z-50 w-[98%] bottom-4 bg-gray-800 py-2 rounded-3xl shadow-lg mx-4">
       <ul className="flex justify-around px-2">
         {__menu__.map((page) => (
-          <li key={page.label} className="w-full flex justify-center">
+          <li key={page.label} className="w-full flex justify-center h-10">
             <Link
               href={page.to}
               passHref
-              className={`flex flex-col items-center py-1 px-4 max-w-15 w-15  rounded-2xl transition-all duration-300 ease-in-out ${getNavLinkClass(
+              className={`flex items-center py-1 px-4 max-w-15 w-15  rounded-2xl transition-all duration-300 ease-in-out ${getNavLinkClass(
                 page.to
               )} `}
             >
               <div>{page.icon}</div>
-              <p className="text-sm mt-1">
-                <strong>{page.label}</strong>
-              </p>
+              {router.pathname === page.to && (
+                <p className="text-sm mt-1 w-20 pl-2">
+                  <strong>{page.label}</strong>
+                </p>
+              )}
             </Link>
           </li>
         ))}
