@@ -75,6 +75,7 @@ const IndexPage: NextPage = () => {
       <div className="text-center p-4 text-3xl mb-4">
         <strong className="">นุ้ย ผักสด</strong>
       </div>
+
       {/* Banner Section */}
       <div className="mb-8">
         <Swiper
